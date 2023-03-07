@@ -18,16 +18,16 @@ const database = firebase.database()
 
 function TurnOn() {
     document.getElementById("myImage").src="https://webvn.com/wp-content/uploads/2015/08/pic_bulbon.gif";
-    document.getElementById("OnOff").innerHTML="BẬT"
-    document.getElementById("OnOff").style.color= "green"
-    database.ref("den_01").set(true)
+    document.getElementById("Led_01").innerHTML="BẬT"
+    document.getElementById("Led_01").style.color= "green"
+    database.ref("den_01").set(false)
 
 }
 function TurnOff() {
     let a="https://webvn.com/wp-content/uploads/2015/08/pic_bulboff.gif";
     document.getElementById("myImage").src=a;
-    document.getElementById("OnOff").innerHTML="TẮT"
+    document.getElementById("Led_01").innerHTML="TẮT"
     if (a=="https://webvn.com/wp-content/uploads/2015/08/pic_bulboff.gif"){
-    document.getElementById("OnOff").style.color= "red"}
-    database.ref("den_01").set(false)
+    document.getElementById("Led_01").style.color= "red"}
+    database.ref("den_01").set(true)
 }
