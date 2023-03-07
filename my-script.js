@@ -20,7 +20,7 @@ function TurnOn() {
     document.getElementById("myImage").src="https://webvn.com/wp-content/uploads/2015/08/pic_bulbon.gif";
     document.getElementById("Led_01").innerHTML="BẬT"
     document.getElementById("Led_01").style.color= "green"
-    database.ref("den_01").set(false)
+    database.ref("den_01").set(true)
 
 }
 function TurnOff() {
@@ -29,5 +29,5 @@ function TurnOff() {
     document.getElementById("Led_01").innerHTML="TẮT"
     if (a=="https://webvn.com/wp-content/uploads/2015/08/pic_bulboff.gif"){
     document.getElementById("Led_01").style.color= "red"}
-    database.ref("den_01").set(true)
+    database.ref("den_01").set(false)
 }
